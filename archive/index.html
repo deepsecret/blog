@@ -21,7 +21,7 @@ layout: default
         {% if paginator.previous_page %}
         <div class="prev">
             <div class="tag">🌗</div>
-            <a href="{{ paginator.previous_page_path }}" class="previous">
+            <a href="{{ paginator.previous_page_path | relative_url }}" class="previous">
                 上一页
             </a>
         </div>
@@ -30,7 +30,7 @@ layout: default
         {% if paginator.next_page %}
         <div class="next">
             <div class="tag">🌓</div>
-            <a href="{{ paginator.next_page_path }}" class="next">下一页</a>
+            <a href="{{ paginator.next_page_path | relative_url }}" class="next">下一页</a>
         </div>
         {% endif %}
     </div>
